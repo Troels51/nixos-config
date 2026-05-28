@@ -21,7 +21,9 @@
     nerd-fonts.fira-code
   ];
 
-  environment.systemPackages = with pkgs; [ 
+  programs.nix-ld.enable = true;
+
+  environment.systemPackages = with pkgs; [
      pkgs.hyprlock
      pkgs.kitty
      pkgs.rofi

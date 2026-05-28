@@ -11,10 +11,11 @@
       ./modules/audio.nix
       ./modules/network.nix
       ./modules/git.nix
-      # ./modules/github-copilot.nix
+      ./modules/tools.nix
       ./modules/desktop.nix
       ./modules/security.nix
       ./modules/beoguard.nix
+      ./modules/shell.nix
     ];
 
   # Bootloader.
