@@ -16,6 +16,8 @@
      wayland.enable = true;
   };
 
+  services.udisk2.enable = true;
+
   fonts.packages = with pkgs; [
     font-awesome
     nerd-fonts.fira-code
