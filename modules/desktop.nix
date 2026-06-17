@@ -8,6 +8,7 @@
   };
 
   services.hypridle.enable = true;
+  services.udisks2.enable = true;
   programs.hyprlock.enable = true;
 
 
@@ -16,7 +17,6 @@
      wayland.enable = true;
   };
 
-  services.udisk2.enable = true;
 
   fonts.packages = with pkgs; [
     font-awesome
@@ -47,6 +47,7 @@
      swww
      hyprpolkitagent
      xdg-desktop-portal-gtk
+     thunar
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
