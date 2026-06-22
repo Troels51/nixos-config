@@ -13,6 +13,35 @@
 
   powerManagement.enable = true;
   services.thermald.enable = true;
+
+
+  # Graphics settings, intnernal gpu, discrete internal gpu and external gpu
+  services.hardware.bolt.enable = true;
+  hardware.graphics.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  hardware.nvidia = {
+    modesetting.enable = false;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = true;
+    nvidiaSettings = true;
+
+    prime = {
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+      allowExternalGpu = true;
+
+
+      intelBusId = "PCI:0:2:0"; # Internal iGPU
+      # nvidiaBusId = "PCI:1:0:0"; # Internal dGPU
+      nvidiaBusId = "PCI:46:0:0"; # External GPU, 2e:00.0
+
+    };
+  };
+
   services.tlp = {
       enable = true;
       pd.enable = true;

@@ -8,7 +8,7 @@
     group = "systemd-network";
   };
 
-  networking.firewall.checkReversePath = "loose";
+  networking.firewall.enable = false;
   services.resolved.enable = true;
   networking.useNetworkd = true;
 

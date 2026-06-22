@@ -5,6 +5,7 @@
      pkgs.kanban
      pkgs.github-copilot-cli
      pkgs.just
+     pkgs.pciutils
   ];
 
 }
