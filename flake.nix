@@ -16,6 +16,12 @@
             ./configuration.nix
           ];
         };
+        hetzner-x86_64 = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./server.nix
+          ];
+        };
       };
     };
 }
