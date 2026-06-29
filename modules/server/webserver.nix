@@ -11,7 +11,7 @@
     group = "www";
 
     extraConfig = ''
-      hffmr.dk {
+      http://hffmr.dk {
         encode zstd gzip
         root * /var/www/hffmr.dk
         file_server
