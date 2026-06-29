@@ -56,5 +56,5 @@
 
    networking.firewall.allowedTCPPorts = [ 22 ];
 
-   system.stateVersion = "24.11";
+   system.stateVersion = "26.05";
  }
