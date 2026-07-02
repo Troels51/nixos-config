@@ -3,7 +3,7 @@
  {
    imports =
      [
-       ./modules/server/webserver.nix
+       ./modules/personal_webserver.nix
      ];
    nix.settings = {
      experimental-features = "nix-command flakes";
