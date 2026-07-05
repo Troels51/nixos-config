@@ -13,9 +13,19 @@
           specialArgs = { inherit inputs; };
           modules = [
             ragenix.nixosModules.default
+	    ./hardware/laptop.nix
             ./configuration.nix
           ];
         };
+	mars = nixpkgs.lib.nixosSystem {
+	  system = "x86_64-linux";
+	  specialArgs = { inherit inputs; };
+	  modules = [
+	    ragenix.nixosModules.default
+	    ./hardware/zbook-g1a.nix
+            ./configuration.nix
+          ];
+	};
         server = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };

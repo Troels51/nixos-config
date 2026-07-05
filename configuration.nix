@@ -7,7 +7,6 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware/laptop.nix
       ./modules/audio.nix
       ./modules/network.nix
       ./modules/git.nix
