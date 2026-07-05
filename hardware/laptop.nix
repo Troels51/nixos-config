@@ -64,6 +64,19 @@
       };
   };
 
+  security.sudo.extraRules = [
+    {
+      users = [ "troels" ];
+      commands = [
+        { command = "/run/current-system/sw/bin/tlp performance"; options = [ "NOPASSWD" ]; }
+        { command = "/run/current-system/sw/bin/tlp balanced"; options = [ "NOPASSWD" ]; }
+        { command = "/run/current-system/sw/bin/tlp power-saver"; options = [ "NOPASSWD" ]; }
+      ];
+    }
+  ];
+
+  services.logind.powerKey = "ignore";
+
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usbhid" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
   boot.initrd.kernelModules = [ ];

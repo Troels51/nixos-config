@@ -14,7 +14,6 @@
       ./modules/tools.nix
       ./modules/desktop.nix
       ./modules/security.nix
-      ./modules/beoguard.nix
       ./modules/shell.nix
     ];
 
