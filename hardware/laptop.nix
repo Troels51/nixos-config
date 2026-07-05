@@ -6,7 +6,7 @@
 {
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
-      ./modules/intune.nix
+      ../modules/intune.nix
     ];
 
   bogo.intune.enable = true;

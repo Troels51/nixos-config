@@ -2,11 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
+      inputs.home-manager.nixosModules.home-manager
       ./modules/audio.nix
       ./modules/network.nix
       ./modules/git.nix
@@ -16,6 +17,13 @@
       ./modules/beoguard.nix
       ./modules/shell.nix
     ];
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.troels = import ./home.nix;
+    extraSpecialArgs = { inherit inputs; };
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

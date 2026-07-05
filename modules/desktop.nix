@@ -7,6 +7,10 @@
     xwayland.enable = true;
   };
 
+  programs.niri = {
+    enable = true;
+  };
+
   services.hypridle.enable = true;
   services.udisks2.enable = true;
   programs.hyprlock.enable = true;
