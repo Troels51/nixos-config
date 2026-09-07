@@ -20,6 +20,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
+    backupFileExtension = "hm-bak";
     users.troels = import ./home.nix;
     extraSpecialArgs = { inherit inputs; };
   };

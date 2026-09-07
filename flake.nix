@@ -15,7 +15,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ragenix.nixosModules.default
-	    ./hardware/laptop.nix
+            ./hardware/laptop.nix
             ./configuration.nix
           ];
         };
@@ -24,7 +24,7 @@
 	  specialArgs = { inherit inputs; };
 	  modules = [
 	    ragenix.nixosModules.default
-	    ./hardware/zbook-g1a.nix
+	          ./hardware/zbook-g1a.nix
             ./configuration.nix
           ];
 	};

@@ -22,6 +22,12 @@ in
       config.window_background_opacity = 0.95
       config.window_decorations = "NONE"
       config.use_fancy_tab_bar = true
+
+      -- Don't dim inactive panes so text stays legible
+      config.inactive_pane_hsb = {
+        saturation = 1.0,
+        brightness = 1.0,
+      }
       config.window_frame = {
         active_titlebar_bg = "${theme.bg_alt}",
         inactive_titlebar_bg = "${theme.bg_alt}",

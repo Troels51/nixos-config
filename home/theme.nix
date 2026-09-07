@@ -17,7 +17,7 @@ if isDayMode then {
     selection_fg = "#4A3E3D";
 
     ansi = {
-      black = "#F9F6F0";
+      black = "#6B5C55";
       red = "#D37B73";
       green = "#7a9c6b";
       yellow = "#E28766";
@@ -27,7 +27,7 @@ if isDayMode then {
       white = "#4A3E3D";
     };
     brights = {
-      black = "#EAD7CD";
+      black = "#8A776A";
       red = "#E28766";
       green = "#5e7c50";
       yellow = "#D37B73";
