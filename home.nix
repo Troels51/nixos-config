@@ -5,7 +5,7 @@
     ./home/wezterm.nix
     ./home/waybar.nix
     ./home/rofi.nix
-    # ./home/zed.nix
+    ./home/zed.nix
     ./home/niri.nix
   ];
 
